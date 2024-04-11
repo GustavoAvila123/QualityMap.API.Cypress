@@ -1,0 +1,25 @@
+{
+  "name": "automacao-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cypress": "Cypress open",
+    "test": "rm -rf allure-results && cypress run --env allure=true --env video=true",
+    "report": "allure generate ./allure-results -o allure-report/ --clean && allure open allure-report"
+  },
+  "keywords": [],
+  "author": "Gustavo Soares de Ávila",
+  "license": "ISC",
+  "devDependencies": {
+    "@bahmutov/cy-api": "2.2.6",
+    "@shelex/cypress-allure-plugin": "^2.40.0",
+    "cypress": "12.14.0"
+  },
+  "dependencies": {
+    "allure-commandline": "2.24.1",
+    "aws4": "1.11.0",
+    "axios": "1.2.0",
+    "yarn": "1.22.19"
+  }
+}
